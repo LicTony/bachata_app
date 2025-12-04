@@ -16,6 +16,8 @@ dependencies:
   provider: ^6.1.1
   cupertino_icons: ^1.0.6
   flutter_slidable: ^3.0.1
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.10
 
 dev_dependencies:
   flutter_test:
@@ -24,3 +26,39 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+flutter_launcher_icons:
+  android: true
+  ios: false  # Como solo usas Android
+  image_path: "assets/icon/app_icon.png"
+  
+  # Para Android 8.0+ (Adaptive Icons)
+  adaptive_icon_background: "#FF6B35"  # Color de fondo
+  adaptive_icon_foreground: "assets/icon/app_icon.png"
+  
+  # Opcional: Usa una imagen diferente para el foreground
+  # adaptive_icon_foreground: "assets/icon/icon_foreground.png"
+
+flutter_native_splash:
+  # Color de fondo del splash
+  color: "#FFFFFF"  # Blanco
+  
+  # O usa una imagen de fondo completa
+  # background_image: "assets/splash/background.png"
+  
+  # Logo/imagen central
+  image: assets/splash/splash_logo.png
+  
+  # Configuración específica para Android
+  android: true
+  ios: false
+  
+  # Opciones adicionales
+  android_12:
+    # Para Android 12+ (tiene su propio sistema de splash)
+    image: assets/splash/splash_logo.png
+    color: "#FFFFFF"
+  
+  # Color de fondo para modo oscuro (opcional)
+  # color_dark: "#000000"
+  # image_dark: assets/splash/splash_logo_dark.png
